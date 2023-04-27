@@ -6,12 +6,18 @@
     <title>Quản lý món ăn</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css" />
 </head>
 
 <body>
-    <h1>Quản lý món ăn</h1>
+    <nav>
+        <ul>
+            <li><a href="#" class="active" data-id="foodList">Món ăn</a></li>
+            <li><a href="#" data-id="drinkList">Đồ uống</a></li>
+        </ul>
+    </nav>
+    <h1 id="title">Quản lý món ăn</h1>
     <form id="form">
         <input type="text" id="name" placeholder="Nhập tên món ăn" />
         <button type="submit">Thêm</button>
@@ -21,7 +27,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Tên món ăn</th>
+                <th id="th">Tên món ăn</th>
                 <th></th>
             </tr>
         </thead>
