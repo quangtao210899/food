@@ -51,13 +51,16 @@ form.addEventListener("submit", function (event) {
 });
 
 loadFromLocalStorage();
-
+function notify(message,status) {
+    $("#random").notify(message, { className:status,  autoHide: false,});
+}
 document.getElementById("random").addEventListener("click", function () {
     if (foodList.length) {
         const randomItem = foodList[Math.floor(Math.random() * foodList.length)];
-        alert(`Hôm nay bạn nên ăn: ${randomItem}`);
+        notify(`Hôm nay bạn nên ăn: ${randomItem}`,"info");
     }
     else {
-        alert(`Chưa có món ăn nào để random`);
+        notify(`Chưa có món ăn nào để random`,"danger")
     }
 })
+
