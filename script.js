@@ -64,18 +64,20 @@ function notify(message, status) {
 document.getElementById("button_remove").addEventListener("click", function () {
     document.getElementById('wrapper').style.display = "none"
     document.getElementById('table_form').style.display = "block"
+    document.body.style.backgroundImage = "none"
 })
 document.getElementById("random").addEventListener("click", function () {
     if (foodList.length) {
-        
+
         // const randomItem = foodList[Math.floor(Math.random() * foodList.length)];
         // if (index_storage == "drinkList") {
-            //     notify(`Hôm nay bạn nên uống: ${randomItem}`, "info");
-            // }
-            // else {
-                //     notify(`Hôm nay bạn nên ăn: ${randomItem}`, "info");
-                // }
-        if(document.getElementsByClassName('hc-luckywheel-list').length){
+        //     notify(`Hôm nay bạn nên uống: ${randomItem}`, "info");
+        // }
+        // else {
+        //     notify(`Hôm nay bạn nên ăn: ${randomItem}`, "info");
+        // }
+        document.body.style.backgroundImage = "url('../images/bg.png')"
+        if (document.getElementsByClassName('hc-luckywheel-list').length) {
             document.querySelector('.hc-luckywheel-list').remove()
         }
         document.getElementById('wrapper').style.display = "block"
