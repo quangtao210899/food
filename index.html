@@ -8,30 +8,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css" />
+    <!-- <link rel="stylesheet" href="css/typo/typo.css" /> -->
+    <link rel="stylesheet" href="css/hc-canvas-luckwheel.css" />
+    <style>
+        .hc-luckywheel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -250px;
+        }
+        #button_remove {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -250px;
+        }
+    </style>
 </head>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="#" class="active" data-id="foodList">Món ăn</a></li>
-            <li><a href="#" data-id="drinkList">Đồ uống</a></li>
-        </ul>
-    </nav>
-    <h1 id="title">Quản lý món ăn</h1>
-    <form id="form">
-        <input type="text" id="name" placeholder="Nhập tên món ăn" />
-        <button type="submit">Thêm</button>
-        <button type="submit" style="margin-left: 10px" class="random" id="random">Random</button>
-    </form>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th id="th">Tên món ăn</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-    </table>
+<body class="bg">
+    <div class="wrapper typo" id="wrapper" style="display: none;">
+        <button style="cursor: pointer" id="button_remove">
+            <span style="color:red;">X</span>
+        </button>
+        <section id="luckywheel" class="hc-luckywheel">
+            <div class="hc-luckywheel-container">
+                <canvas class="hc-luckywheel-canvas" width="500px" height="500px">Vòng Xoay May Mắn</canvas>
+            </div>
+            <a class="hc-luckywheel-btn" href="javascript:;">Xoay</a>
+        </section>
+    </div>
+    <div id="table_form">
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-id="foodList">Món ăn</a></li>
+                <li><a href="#" data-id="drinkList">Đồ uống</a></li>
+            </ul>
+        </nav>
+        <h1 id="title">Quản lý món ăn</h1>
+        <form id="form">
+            <input type="text" id="name" placeholder="Nhập tên món ăn" />
+            <button type="submit">Thêm</button>
+            <button type="submit" style="margin-left: 10px" class="random" id="random">Random</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th id="th">Tên món ăn</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/hc-canvas-luckwheel.js"></script>
     <script src="script.js"> </script>
 </body>
