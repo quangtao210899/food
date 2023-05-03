@@ -76,7 +76,8 @@ document.getElementById("random").addEventListener("click", function () {
         // else {
         //     notify(`Hôm nay bạn nên ăn: ${randomItem}`, "info");
         // }
-        document.body.style.backgroundImage = "url('../images/bg.png')"
+        document.body.style.backgroundImage = "url('https://i.ibb.co/4JwrCCB/bg.png')"
+        document.body.style.backgroundSize = "cover"
         if (document.getElementsByClassName('hc-luckywheel-list').length) {
             document.querySelector('.hc-luckywheel-list').remove()
         }
